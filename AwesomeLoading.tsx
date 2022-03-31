@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, TextStyle, Dimensions } from "react-native";
+import { View, Text, TextStyle, Dimensions, ViewStyle } from "react-native";
 import FastImage from "react-native-fast-image";
 
 export interface AwesomeLoadingProps {
@@ -29,6 +29,7 @@ export interface AwesomeLoadingProps {
   textStyle?: TextStyle;
   direction?: "row" | "column";
   isActive: boolean;
+  style?: ViewStyle
 }
 
 export interface AwesomeLoadingState {}
@@ -42,12 +43,12 @@ export default class AwesomeLoading extends React.Component<
     this.state = {};
   }
 
-  renderIndicator = (indicatorId: number, size: number) => {
+  renderIndicator = (indicatorId: number, size: number, style:any) => {
     switch (indicatorId) {
       case 1:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator1.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -56,7 +57,7 @@ export default class AwesomeLoading extends React.Component<
       case 2:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator2.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -65,7 +66,7 @@ export default class AwesomeLoading extends React.Component<
       case 3:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator3.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -74,7 +75,7 @@ export default class AwesomeLoading extends React.Component<
       case 4:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator4.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -82,7 +83,7 @@ export default class AwesomeLoading extends React.Component<
       case 5:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator5.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -90,7 +91,7 @@ export default class AwesomeLoading extends React.Component<
       case 6:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator6.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -98,7 +99,7 @@ export default class AwesomeLoading extends React.Component<
       case 7:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator7.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -106,7 +107,7 @@ export default class AwesomeLoading extends React.Component<
       case 8:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center"},style]}
             source={require("./indicators/indicator8.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -114,7 +115,7 @@ export default class AwesomeLoading extends React.Component<
       case 9:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator9.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -122,7 +123,7 @@ export default class AwesomeLoading extends React.Component<
       case 10:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator10.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -130,7 +131,7 @@ export default class AwesomeLoading extends React.Component<
       case 11:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator11.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -138,7 +139,7 @@ export default class AwesomeLoading extends React.Component<
       case 12:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator12.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -147,7 +148,7 @@ export default class AwesomeLoading extends React.Component<
       case 13:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator13.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -155,7 +156,7 @@ export default class AwesomeLoading extends React.Component<
       case 14:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator14.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -163,7 +164,7 @@ export default class AwesomeLoading extends React.Component<
       case 15:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator15.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -172,7 +173,7 @@ export default class AwesomeLoading extends React.Component<
       case 16:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator16.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -180,7 +181,7 @@ export default class AwesomeLoading extends React.Component<
       case 17:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator17.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -189,7 +190,7 @@ export default class AwesomeLoading extends React.Component<
       case 18:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator18.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -197,7 +198,7 @@ export default class AwesomeLoading extends React.Component<
       case 19:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator19.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -205,7 +206,7 @@ export default class AwesomeLoading extends React.Component<
       case 20:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator20.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -213,7 +214,7 @@ export default class AwesomeLoading extends React.Component<
       default:
         return (
           <FastImage
-            style={{ width: size, height: size, alignSelf: "center" }}
+            style={[{ width: size, height: size, alignSelf: "center" },style]}
             source={require("./indicators/indicator1.gif")}
             resizeMode={FastImage.resizeMode.contain}
           />
@@ -228,7 +229,8 @@ export default class AwesomeLoading extends React.Component<
       text,
       direction,
       textStyle,
-      isActive
+      isActive,
+      style = {}
     } = this.props;
     return isActive ? (
       <View
@@ -245,7 +247,7 @@ export default class AwesomeLoading extends React.Component<
           elevation: 1
         }}
       >
-        {this.renderIndicator(indicatorId, size)}
+        {this.renderIndicator(indicatorId, size, style)}
         {text ? <Text style={textStyle}>{text}</Text> : null}
       </View>
     ) : null;
